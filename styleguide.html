@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rouzey — Visual Identity</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F4F0; --panel:#FFFFFF; --ink:#211B1D; --body:#4A4143; --faint:#746A6C;
+  --hair:#E4DFD7; --hair-2:#D2CCC2; --bordeaux:#6E1423; --bordeaux-2:#571020; --ink-band:#221A1C;
+}
+*{box-sizing:border-box;font-synthesis:none}
+body{margin:0;background:var(--paper);color:var(--body);font-family:"Inter",system-ui,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 26px}
+a{color:var(--bordeaux)}
+header{border-bottom:1px solid var(--hair);padding:20px 0}
+.brand{font-family:"Instrument Serif",serif;font-size:27px;color:var(--ink)}
+main{padding:52px 0 90px}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--bordeaux);font-weight:700}
+h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(38px,5.4vw,58px);color:var(--ink);margin:12px 0 8px;line-height:1.05}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--faint);margin-bottom:8px}
+h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:30px;color:var(--ink);margin:56px 0 6px}
+.sub{color:var(--faint);font-size:14.5px;margin:0 0 22px}
+h3{font-size:15px;font-weight:600;color:var(--ink);margin:26px 0 10px}
+p{margin:0 0 12px}
+.mono{font-family:"IBM Plex Mono",monospace}
+
+.sw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.sw{border:1px solid var(--hair);border-radius:12px;overflow:hidden;background:var(--panel)}
+.sw .chip{height:74px}
+.sw .lab{padding:10px 12px;font-size:12px}
+.sw .lab b{display:block;color:var(--ink);font-size:12.5px}
+.sw .lab span{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--faint)}
+
+.spec{background:var(--panel);border:1px solid var(--hair);border-radius:14px;padding:26px 28px;margin-bottom:14px}
+.spec .tagline{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+.t-serif{font-family:"Instrument Serif",serif;color:var(--ink)}
+.t-h1{font-size:52px;line-height:1.02}
+.t-h1 .acc{color:var(--bordeaux);font-style:italic}
+.t-h2{font-size:32px}
+.t-body{font-size:17px;max-width:52ch}
+.t-mono{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+
+.row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;font-weight:600;font-size:15px;border:1px solid var(--bordeaux);border-radius:7px;padding:13px 24px;background:var(--bordeaux);color:#FDFBF8}
+.btn.line{background:transparent;color:var(--bordeaux)}
+.dose{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:#FDF7F2;background:var(--bordeaux);padding:4px 12px;border-radius:100px}
+.chip2{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--faint);background:var(--paper);border:1px solid var(--hair);padding:4px 12px;border-radius:100px}
+.card{background:var(--panel);border:1px solid var(--hair);border-radius:12px;padding:20px 22px;max-width:280px}
+.card .iname{font-family:"Instrument Serif",serif;font-size:22px;color:var(--ink);display:block;margin-bottom:8px}
+.card.active{border-color:var(--bordeaux);background:#FCFBF8;box-shadow:0 12px 30px -14px rgba(110,20,35,.28)}
+
+.sachet{width:132px;height:220px;border-radius:11px 11px 14px 14px;padding:24px 13px 15px;display:flex;flex-direction:column;justify-content:space-between;
+  background:linear-gradient(150deg,#7E1B2C 0%,#6E1423 42%,#571020 100%);
+  box-shadow:0 18px 30px -14px rgba(60,18,28,.45),inset 0 1px 0 rgba(255,255,255,.16)}
+.sachet .st{font-family:"IBM Plex Mono",monospace;font-size:6.5px;letter-spacing:.2em;color:rgba(253,247,242,.75);text-transform:uppercase}
+.sachet .wm{font-family:"Instrument Serif",serif;font-size:24px;color:#FDF7F2;line-height:1}
+.sachet .wm small{display:block;font-family:"IBM Plex Mono",monospace;font-size:6px;letter-spacing:.2em;margin-top:6px;color:rgba(253,247,242,.8)}
+.sachet .tg{font-family:"Instrument Serif",serif;font-style:italic;font-size:11px;color:#FDF7F2}
+
+.inkband{background:var(--ink-band);border-radius:14px;padding:26px 28px;color:#F0EAE4}
+.inkband .kicker{color:#C08492}
+.inkband .rule{width:46px;height:2px;background:#9E4655;margin:12px 0 14px}
+.inkband p{font-family:"Instrument Serif",serif;font-size:20px;line-height:1.5;color:#F0EAE4}
+
+.voice{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.v{background:var(--panel);border:1px solid var(--hair);border-radius:12px;padding:18px 20px;font-size:14.5px}
+.v h4{margin:0 0 8px;font-size:12px;font-family:"IBM Plex Mono",monospace;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.v.do h4{color:#2E6B45}.v.dont h4{color:var(--bordeaux)}
+.v ul{margin:0;padding-left:18px}.v li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--hair)}
+th{text-align:left;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--bordeaux);padding:11px 14px;border-bottom:1px solid var(--hair-2)}
+td{padding:11px 14px;border-bottom:1px solid var(--hair);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td .mono{font-size:12.5px;color:var(--faint)}
+@media(max-width:640px){.voice{grid-template-columns:1fr}.t-h1{font-size:40px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><span class="brand">Rouzey</span></div></header>
+<main class="wrap">
+  <span class="kicker">Brand guidelines · v1</span>
+  <h1>Visual identity</h1>
+  <div class="meta">August 16, 2026 · for web, packaging, and social use</div>
+  <p style="max-width:60ch">One sentence to rule every decision: <b style="color:var(--ink)">calm, premium, and honest — a wine-cellar apothecary, never a supplement shop.</b> If an element shouts, it's off-brand.</p>
+
+  <h2>Color</h2>
+  <p class="sub">Stone neutrals + one bordeaux accent. Bordeaux is the only "loud" color and it must stay lonely.</p>
+  <div class="sw-grid">
+    <div class="sw"><div class="chip" style="background:#F6F4F0"></div><div class="lab"><b>Paper</b><span>#F6F4F0 · page background</span></div></div>
+    <div class="sw"><div class="chip" style="background:#FFFFFF;border-bottom:1px solid var(--hair)"></div><div class="lab"><b>Panel</b><span>#FFFFFF · cards, alt bands</span></div></div>
+    <div class="sw"><div class="chip" style="background:#211B1D"></div><div class="lab"><b>Ink</b><span>#211B1D · headlines</span></div></div>
+    <div class="sw"><div class="chip" style="background:#4A4143"></div><div class="lab"><b>Body</b><span>#4A4143 · paragraph text</span></div></div>
+    <div class="sw"><div class="chip" style="background:#746A6C"></div><div class="lab"><b>Faint</b><span>#746A6C · labels (AA-safe)</span></div></div>
+    <div class="sw"><div class="chip" style="background:#6E1423"></div><div class="lab"><b>Bordeaux</b><span>#6E1423 · the accent</span></div></div>
+    <div class="sw"><div class="chip" style="background:#571020"></div><div class="lab"><b>Bordeaux deep</b><span>#571020 · hover, gradient end</span></div></div>
+    <div class="sw"><div class="chip" style="background:#221A1C"></div><div class="lab"><b>Ink band</b><span>#221A1C · founder section</span></div></div>
+    <div class="sw"><div class="chip" style="background:#E4DFD7"></div><div class="lab"><b>Hairline</b><span>#E4DFD7 · borders, rules</span></div></div>
+    <div class="sw"><div class="chip" style="background:linear-gradient(150deg,#7E1B2C,#6E1423 42%,#571020)"></div><div class="lab"><b>Foil</b><span>7E1B2C→6E1423→571020</span></div></div>
+  </div>
+  <h3>On-dark accents (ink band only)</h3>
+  <div class="row"><span class="chip2" style="background:#221A1C;color:#C08492;border-color:#221A1C">kicker #C08492</span><span class="chip2" style="background:#221A1C;color:#F0EAE4;border-color:#221A1C">text #F0EAE4</span><span class="chip2" style="background:#221A1C;color:#9E4655;border-color:#221A1C">rule #9E4655</span></div>
+
+  <h2>Typography</h2>
+  <p class="sub">Three fonts, three jobs. Serif = emotion. Sans = clarity. Mono = data. Never let them swap jobs.</p>
+  <div class="spec">
+    <div class="tagline">Display · Instrument Serif — regular 400 + italic only. No bold exists; faux-bold is disabled site-wide. Hierarchy comes from size.</div>
+    <div class="t-serif t-h1">Better sex.<br><span class="acc">Real desire.</span></div>
+    <div class="t-serif t-h2" style="margin-top:16px">Six ingredients. One night.</div>
+  </div>
+  <div class="spec">
+    <div class="tagline">Body &amp; UI · Inter 400 / 500 / 600 — stand-in for Suisse Int'l (licensed upgrade path)</div>
+    <div class="t-body">Together they get blood flowing, lift desire, and keep you present. Plain sentences, short words, one idea each.</div>
+  </div>
+  <div class="spec">
+    <div class="tagline">Data &amp; labels · IBM Plex Mono 400 / 700 — stand-in for ABC Monument Grotesk Mono (licensed upgrade path)</div>
+    <div class="t-mono" style="color:var(--bordeaux);letter-spacing:.26em">The waitlist is open</div>
+    <div class="t-mono" style="margin-top:10px;color:var(--faint)">1,000 MG · Non-GMO · cGMP</div>
+  </div>
+  <table>
+    <tr><th>Role</th><th>Spec</th></tr>
+    <tr><td>Hero H1</td><td class="mono">Instrument Serif 400 · clamp(40px→84px) · line-height 1.04 · accent word italic bordeaux</td></tr>
+    <tr><td>Section H2</td><td class="mono">Instrument Serif 400 · clamp(30px→54px)</td></tr>
+    <tr><td>Body</td><td class="mono">Inter 400 · 17px / 1.65 · max ~62ch</td></tr>
+    <tr><td>Kicker</td><td class="mono">Plex Mono 700 · 11px · tracking .26em · UPPERCASE · bordeaux</td></tr>
+    <tr><td>UI hints</td><td class="mono">Plex Mono 400 · 10.5px · tracking .24em · UPPERCASE · faint</td></tr>
+  </table>
+
+  <h2>Core components</h2>
+  <p class="sub">Buttons squared (7px), chips fully round (100px), cards 12–14px, hairline borders everywhere. No shadows except the bordeaux lift on active/product elements.</p>
+  <div class="row" style="margin-bottom:16px">
+    <span class="btn">Join the waitlist</span>
+    <span class="btn line">Secondary</span>
+    <span class="dose">1,000 MG</span>
+    <span class="chip2">600 mg</span>
+  </div>
+  <div class="row" style="align-items:flex-start">
+    <div class="card"><span class="iname">Oxystorm®</span><span class="chip2">1,000 mg</span></div>
+    <div class="card active"><span class="iname">Testofen®</span><span class="dose">600 MG</span></div>
+    <div class="sachet"><div class="st">Nitric-oxide gel · 12g</div><div class="wm">Rouzey<small>OXYSTORM COMPLEX</small></div><div class="tg">For the night ahead.</div></div>
+  </div>
+  <h3>The ink band (one per page, maximum)</h3>
+  <div class="inkband"><span class="kicker">A note from the founder</span><div class="rule"></div><p>The dark moment that anchors the page. Cream serif on warm near-black; used for the founder's voice only.</p></div>
+
+  <h2>Voice</h2>
+  <p class="sub">Two-beat declaratives, grade-school words, restraint as the trust signal.</p>
+  <div class="spec"><div class="tagline">The cadence</div>
+    <div class="t-serif" style="font-size:24px;line-height:1.6">Better sex. Real desire.<br>Six ingredients. One night.<br>No pills. Just one gel.<br><span style="font-style:italic">For the night ahead.</span></div>
+  </div>
+  <div class="voice">
+    <div class="v do"><h4>Always</h4><ul><li>Short sentences. One idea each.</li><li>Verbs over adjectives ("get blood flowing").</li><li>Numbers and specifics (600 mg, 15 minutes).</li><li>Say what we don't do, plainly.</li><li>One italic accent phrase per page.</li></ul></div>
+    <div class="v dont"><h4>Never</h4><ul><li>"Powerful," "revolutionary," "game-changing."</li><li>Gradient text, glows, neon, dark-mode hype.</li><li>Blush pink; any second accent color.</li><li>Fake urgency, fake reviews, fake counts.</li><li>Gym or medical-clinic language.</li></ul></div>
+  </div>
+
+  <h2>Wordmark</h2>
+  <p style="max-width:60ch"><span class="brand" style="font-size:34px">Rouzey</span><br>Instrument Serif regular, tight tracking, ink on light / cream on foil. No ® until CIPO registration; ™ permitted after filing. Never bolded, outlined, or gradient-filled.</p>
+
+  <h2>Motion &amp; access</h2>
+  <p style="max-width:62ch">Motion is subtle and earns its place: fade-up reveals, the smart-hide header, card lift on selection. Everything switches off under <span class="mono" style="font-size:13px">prefers-reduced-motion</span>. Floor: WCAG 2.2 AA contrast, visible focus rings in bordeaux, full keyboard operability, skip link.</p>
+</main>
+</body>
+</html>

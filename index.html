@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rouzey — Sexual wellness, reimagined.</title>
+<meta name="description" content="Better sex. Real desire. Enhance your drive and performance with a clinically-studied jelly stick for the bedroom. Every dose on the label. Join the waitlist." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F4F0;
+  --panel:#FFFFFF;
+  --ink:#211B1D;
+  --body:#4A4143;
+  --faint:#746A6C;
+  --hair:#E4DFD7;
+  --hair-2:#D2CCC2;
+  --bordeaux:#6E1423;
+  --bordeaux-2:#571020;
+  --ink-band:#221A1C;
+  --maxw:1160px;
+  --pad:clamp(56px,9vw,120px);
+}
+*{box-sizing:border-box;font-synthesis:none}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--body);
+  font-family:"Inter",system-ui,sans-serif;font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:"Instrument Serif",serif;font-weight:500;line-height:1.06;letter-spacing:-.01em;margin:0;color:var(--ink)}
+.mono{font-family:"IBM Plex Mono",monospace}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--bordeaux);font-weight:700;display:inline-block}
+.acc{color:var(--bordeaux);font-style:italic}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;white-space:nowrap;
+  font-family:"Inter";font-weight:600;font-size:15px;border:1px solid var(--bordeaux);border-radius:7px;
+  padding:13px 26px;background:var(--bordeaux);color:#FDFBF8;transition:background .18s,border-color .18s}
+.btn:hover{background:var(--bordeaux-2);border-color:var(--bordeaux-2)}
+.btn.lg{padding:15px 30px;font-size:16px}
+.btn.line{background:transparent;color:var(--bordeaux)}
+.btn.line:hover{background:rgba(110,20,35,.06)}
+
+/* announcement */
+.announce{background:var(--bordeaux);color:#F4E6E2;text-align:center;
+  font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:10px 16px}
+.announce b{color:#fff;font-weight:700}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(251,249,246,.92);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);
+  transition:transform .32s ease}
+header.navhide{transform:translateY(-100%)}
+.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:68px}
+.brand{font-family:"Instrument Serif",serif;font-size:27px;letter-spacing:.01em;color:var(--ink)}
+.navlinks{display:flex;gap:26px;font-size:14.5px;color:var(--body);font-weight:500;justify-self:start}
+.navlinks a{border-bottom:1px solid transparent;padding-bottom:2px;transition:border-color .2s,color .2s}
+.navlinks a:hover{color:var(--ink);border-color:var(--hair-2)}
+.nav .btn{padding:10px 20px;font-size:14px;justify-self:end}
+.nav .brand{justify-self:center}
+@media(max-width:640px){.navlinks{gap:16px;font-size:13.5px}}
+
+/* HERO */
+.hero{padding:clamp(52px,7vw,92px) 0 0;border-bottom:1px solid var(--hair)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5vw,72px);align-items:center;padding-bottom:clamp(52px,7vw,88px)}
+.hero h1{font-size:clamp(40px,6.6vw,84px)}
+.hero .sub{font-size:19px;max-width:34ch;margin:24px 0 30px;color:var(--body)}
+.hero .sub b{color:var(--ink);font-weight:600}
+.signup{display:flex;gap:10px;max-width:460px}
+.signup input{flex:1;background:var(--panel);border:1px solid var(--hair-2);border-radius:7px;color:var(--ink);
+  padding:14px 16px;font-size:15px;font-family:inherit;outline:none;transition:border-color .2s,box-shadow .2s}
+.signup input::placeholder{color:var(--faint)}
+.signup input:focus{border-color:var(--bordeaux);box-shadow:0 0 0 3px rgba(110,20,35,.10)}
+.formnote{margin-top:12px;font-size:13.5px;color:var(--faint)}
+.hero-facts{display:flex;gap:28px;margin-top:36px;padding-top:24px;border-top:1px solid var(--hair);flex-wrap:wrap}
+.hf{display:flex;flex-direction:column;gap:2px}
+.hf .n{font-family:"Instrument Serif";font-size:24px;font-weight:500;color:var(--ink)}
+.hf .k{font-family:"IBM Plex Mono";font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+
+/* product stage — studio style */
+.stage{position:relative;display:flex;justify-content:center;align-items:center;min-height:480px}
+.studio{position:absolute;width:min(430px,86%);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(closest-side,#EDE9E2,#F6F4F0 78%)}
+.sachet{position:relative;width:216px;height:356px;border-radius:14px 14px 18px 18px;transform:rotate(-4deg);
+  padding:40px 22px 24px;display:flex;flex-direction:column;justify-content:space-between;
+  background:linear-gradient(150deg,#7E1B2C 0%,#6E1423 42%,#571020 100%);
+  box-shadow:0 30px 50px -22px rgba(60,18,28,.45),0 6px 16px -8px rgba(60,18,28,.28),inset 0 1px 0 rgba(255,255,255,.16),inset 0 0 0 1px rgba(255,255,255,.06)}
+.sachet::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(112deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,0) 26%)}
+.sachet .perf{position:absolute;top:15px;left:16px;right:16px;display:flex;align-items:center;gap:8px;
+  font-family:"IBM Plex Mono";font-size:8px;letter-spacing:.16em;color:rgba(253,247,242,.66);text-transform:uppercase}
+.sachet .perf .dash{flex:1;height:1px;background:repeating-linear-gradient(90deg,rgba(253,247,242,.5) 0 4px,transparent 4px 8px)}
+.sachet .stag{font-family:"IBM Plex Mono";font-size:9.5px;letter-spacing:.22em;color:rgba(253,247,242,.75);text-transform:uppercase}
+.sachet .wm{font-family:"Instrument Serif";font-weight:600;font-size:36px;color:#FDF7F2;line-height:1}
+.sachet .wm small{display:block;font-family:"IBM Plex Mono";font-weight:400;font-size:9px;letter-spacing:.22em;margin-top:9px;color:rgba(253,247,242,.8)}
+.sachet .lab{font-family:"IBM Plex Mono";font-size:9.5px;letter-spacing:.1em;color:rgba(253,247,242,.85);text-transform:uppercase}
+.sachet .lab b{color:#fff}
+.sachet .tag{font-family:"Instrument Serif";font-size:15.5px;color:#FDF7F2}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.stage{order:-1;min-height:400px}}
+
+/* badge ticker */
+.ticker{border-bottom:1px solid var(--hair);background:var(--panel);overflow:hidden;
+  -webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.ticker .track{display:flex;width:max-content;animation:scroll 36s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.tk{display:flex;align-items:center;gap:12px;padding:16px 42px;font-family:"IBM Plex Mono";font-weight:700;
+  font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);flex:none}
+.tk .bicon{display:inline-flex;color:var(--ink)}
+.tk .bicon svg{width:28px;height:28px;display:block}
+
+/* section shell */
+.band{padding:var(--pad) 0}
+.band.alt{background:var(--panel);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.band.ink{background:var(--ink-band);border-top:1px solid var(--ink-band);border-bottom:1px solid var(--ink-band)}
+.band.ink .kicker{color:#C08492}
+.band.ink .founder blockquote{color:#F0EAE4}
+.band.ink .founder .rule{background:#9E4655}
+.band.ink .founder .sig .name{color:#F0EAE4}
+.band.ink .founder .sig .role{color:rgba(240,234,228,.55)}
+.sec-head{max-width:640px}
+.sec-head.center{margin:0 auto;text-align:center}
+.sec-head h2{font-size:clamp(30px,4.6vw,54px);margin:16px 0 0}
+.sec-head p{font-size:17.5px;margin:18px 0 0;color:var(--body)}
+
+/* CONSTELLATION (light) */
+.constel{position:relative;display:grid;grid-template-columns:1fr minmax(240px,300px) 1fr;gap:40px;align-items:center;margin-top:56px}
+.connector{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:visible}
+.col{display:flex;flex-direction:column;gap:14px;position:relative;z-index:2}
+.icard{position:relative;min-height:104px;border-radius:12px;border:1px solid var(--hair);cursor:pointer;
+  display:flex;flex-direction:column;justify-content:center;gap:8px;padding:20px 22px;text-align:left;
+  background:var(--panel);transition:border-color .25s,box-shadow .25s,background .25s;font-family:inherit}
+.icard .iname{font-family:"Instrument Serif";font-size:22px;font-weight:500;color:var(--faint);transition:color .25s}
+.icard .idose{align-self:flex-start;font-family:"IBM Plex Mono";font-size:12px;font-weight:700;color:var(--faint);
+  background:var(--paper);border:1px solid var(--hair);padding:3px 11px;border-radius:100px;transition:.25s}
+.icard:hover{border-color:var(--hair-2);box-shadow:0 6px 18px -10px rgba(60,18,28,.15)}
+.icard.active{border-color:var(--bordeaux);background:#FCFBF8;box-shadow:0 12px 30px -14px rgba(110,20,35,.28)}
+.icard.active .iname{color:var(--ink)}
+.icard.active .idose{background:var(--bordeaux);color:#FDF7F2;border-color:var(--bordeaux)}
+.feature{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:2}
+.feature .fnum{font-family:"IBM Plex Mono";font-size:13px;letter-spacing:.24em;color:var(--faint);margin-bottom:6px}
+.feature .fname{font-size:clamp(28px,3.2vw,40px);font-weight:500;margin-bottom:24px;color:var(--ink);font-family:"Instrument Serif"}
+.feature .fsachet-wrap{position:relative;margin-bottom:24px}
+.feature .studio-sm{position:absolute;inset:-34px;border-radius:50%;background:radial-gradient(closest-side,#EDE9E2,transparent 78%)}
+.feature .sachet{width:142px;height:238px;transform:none}
+.feature .sachet .wm{font-size:26px}
+.feature .fdesc{font-size:16px;max-width:24ch;min-height:2.6em;margin-bottom:16px;color:var(--body)}
+.feature .fdose{font-family:"IBM Plex Mono";font-size:19px;font-weight:700;letter-spacing:.06em;color:var(--bordeaux)}
+@media(max-width:860px){.constel{grid-template-columns:1fr 1fr;gap:14px}.feature{grid-column:1/-1;order:-1;margin-bottom:14px}.connector{display:none}}
+@media(max-width:460px){.constel{grid-template-columns:1fr}}
+
+/* TRANSPARENCY / SUPPLEMENT FACTS */
+.transp{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center}
+.transp .txt h2{font-size:clamp(27px,4vw,46px)}
+.transp .txt p{margin:18px 0 0;max-width:44ch}
+.transp .txt .pt{display:flex;gap:14px;margin-top:22px;align-items:flex-start}
+.transp .txt .pt .dot{flex:none;width:6px;height:6px;border-radius:50%;background:var(--bordeaux);margin-top:9px}
+.transp .txt .pt p{margin:0}
+.facts{background:#fff;border:2px solid var(--ink);padding:18px 20px;max-width:430px;margin:0 auto;color:var(--ink);
+  font-family:Helvetica,Arial,sans-serif;box-shadow:0 24px 50px -28px rgba(60,18,28,.25)}
+.facts h3{font-family:inherit;font-weight:900;font-size:30px;letter-spacing:-.02em;margin:0 0 2px}
+.facts .srv{font-size:13.5px;line-height:1.45}
+.facts .bar{height:9px;background:var(--ink);margin:8px 0 4px}
+.facts .bar.thin{height:4px}
+.facts table{width:100%;border-collapse:collapse;font-size:13px}
+.facts th{text-align:left;font-size:12.5px;border-bottom:3px solid var(--ink);padding:4px 0}
+.facts th:last-child{text-align:right}
+.facts td{padding:5px 0;border-bottom:1px solid #999;vertical-align:top}
+.facts td:last-child{text-align:right;white-space:nowrap;font-weight:700}
+.facts tr:last-child td{border-bottom:none}
+.facts .fn{font-size:11.5px;line-height:1.5;margin-top:8px}
+.facts .oi{font-size:12px;line-height:1.5;margin-top:8px;padding-top:8px;border-top:3px solid var(--ink)}
+@media(max-width:840px){.transp{grid-template-columns:1fr}}
+
+/* COMPARISON */
+.pos-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,5vw,64px);align-items:center}
+.pos-wrap .lede h2{font-size:clamp(27px,4.2vw,46px)}
+.pos-wrap .lede p{margin:18px 0 0;max-width:42ch}
+.compare{border:1px solid var(--hair-2);border-radius:14px;overflow:hidden;background:var(--panel)}
+.crow{display:grid;grid-template-columns:1fr 1fr}
+.crow>div{padding:18px 24px;font-size:15px;display:flex;align-items:flex-start;gap:11px;border-bottom:1px solid var(--hair)}
+.crow .old{color:var(--faint);border-right:1px solid var(--hair)}
+.crow .new{color:var(--ink);background:#FAF9F5}
+.crow:last-child>div{border-bottom:none}
+.chead{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.crow.head .old{color:var(--faint)}.crow.head .new{color:var(--bordeaux)}
+.tick{color:var(--bordeaux);flex:none;margin-top:3px}.cross{color:var(--hair-2);flex:none;margin-top:3px}
+@media(max-width:840px){.pos-wrap{grid-template-columns:1fr}}
+
+/* TIMELINE */
+.timeline{position:relative;margin-top:56px}
+.tl-line{position:absolute;left:0;right:0;top:8px;height:1px;background:var(--hair-2)}
+.tl-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.tl-step{position:relative;padding-top:36px}
+.tl-node{position:absolute;top:2px;left:0;width:13px;height:13px;border-radius:50%;background:var(--paper);border:2px solid var(--hair-2);transition:.3s}
+.tl-step.lit .tl-node{background:var(--bordeaux);border-color:var(--bordeaux)}
+.tl-step .no{font-family:"IBM Plex Mono";font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+.tl-step .when{font-family:"Instrument Serif";font-size:27px;font-weight:500;margin:8px 0 10px;color:var(--ink)}
+.tl-step p{font-size:15px;margin:0;max-width:34ch}
+@media(max-width:760px){.tl-steps{grid-template-columns:1fr;gap:0}.tl-line{left:6px;right:auto;top:0;bottom:0;width:1px;height:auto}.tl-step{padding:0 0 36px 38px}.tl-node{left:0;top:4px}}
+
+/* STANDARD */
+.standard{max-width:820px;margin:56px auto 0}
+.std{display:grid;grid-template-columns:64px 1fr;gap:22px;padding:26px 0;border-bottom:1px solid var(--hair)}
+.std:last-child{border-bottom:none}
+.std .num{font-family:"Instrument Serif";font-size:26px;font-weight:500;color:var(--bordeaux)}
+.std h4{font-size:20px;font-weight:600;font-family:"Inter";color:var(--ink);margin-bottom:6px}
+.std p{margin:0;font-size:15.5px;max-width:58ch}
+@media(max-width:560px){.std{grid-template-columns:44px 1fr;gap:14px}}
+
+/* FOUNDER */
+.founder{max-width:680px;margin:0 auto;text-align:left}
+.founder .rule{width:52px;height:2px;background:var(--bordeaux);margin:22px 0 26px}
+.founder blockquote{margin:0;font-family:"Instrument Serif";font-size:clamp(21px,2.6vw,26px);line-height:1.5;font-weight:400;color:var(--ink)}
+.founder .sig{margin-top:26px;display:flex;flex-direction:column;gap:2px}
+.founder .sig .name{font-family:"Instrument Serif";font-size:22px;color:var(--ink)}
+.founder .sig .role{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+
+/* WAITLIST */
+.wl{max-width:860px;margin:0 auto;text-align:center}
+.wl h2{font-size:clamp(28px,4.6vw,52px);margin:14px 0 0}
+.wl .lead{font-size:17.5px;max-width:42ch;margin:18px auto 0}
+.perks{display:grid;grid-template-columns:repeat(3,1fr);margin:44px 0 0;border:1px solid var(--hair-2);border-radius:14px;overflow:hidden;background:var(--panel);text-align:left}
+.perk{padding:28px 26px;border-right:1px solid var(--hair)}
+.perk:last-child{border-right:none}
+.perk .pk{font-family:"IBM Plex Mono";font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--bordeaux);font-weight:700}
+.perk h4{font-family:"Instrument Serif";font-size:21px;font-weight:500;margin:10px 0 8px}
+.perk p{font-size:14.5px;margin:0}
+.wl .signup{margin:36px auto 0;max-width:460px}
+.wl .note{margin-top:13px;font-family:"IBM Plex Mono";font-size:11.5px;letter-spacing:.05em;color:var(--faint)}
+.wl-how{display:flex;gap:12px;justify-content:center;align-items:center;margin-top:26px;flex-wrap:wrap;
+  font-family:"IBM Plex Mono";font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.wl-how b{color:var(--ink);font-weight:700}.wl-how .ar{color:var(--bordeaux)}
+.wl-success{display:none;max-width:600px;margin:8px auto 0}
+.wl-success.show{display:block}
+.wl-join.hide{display:none}
+.pos-num{font-family:"Instrument Serif";font-size:clamp(40px,6.5vw,64px);font-weight:500;line-height:1;margin:14px 0 4px;color:var(--bordeaux)}
+.pos-label{font-size:16px;margin-bottom:30px}
+.ref-title{font-family:"Instrument Serif";font-size:22px;font-weight:500;color:var(--ink);margin-bottom:6px}
+.ref-sub{font-size:14.5px;max-width:38ch;margin:0 auto 16px}
+.refbox{display:flex;gap:10px;max-width:460px;margin:0 auto}
+.refbox input{flex:1;background:var(--panel);border:1px solid var(--hair-2);border-radius:7px;color:var(--ink);padding:13px 16px;font-size:13.5px;font-family:"IBM Plex Mono";outline:none}
+.friends{margin-top:14px;font-family:"IBM Plex Mono";font-size:12px;color:var(--faint)}.friends b{color:var(--bordeaux)}
+@media(max-width:720px){.perks{grid-template-columns:1fr}.perk{border-right:none;border-bottom:1px solid var(--hair)}.perk:last-child{border-bottom:none}}
+
+/* FAQ */
+.faq{max-width:800px;margin:48px auto 0}
+.q{border-bottom:1px solid var(--hair)}
+.q .hd{width:100%;background:none;border:none;color:var(--ink);text-align:left;cursor:pointer;
+  padding:24px 40px 24px 0;position:relative;font-family:inherit}
+.q .qt{font-family:"Instrument Serif";font-size:21px;font-weight:500;line-height:1.35}
+.q .hd::after{content:"+";position:absolute;right:2px;top:24px;font-family:"IBM Plex Mono";font-size:22px;color:var(--bordeaux);transition:transform .3s}
+.q.open .hd::after{transform:rotate(45deg)}
+.q .a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.q.open .a{max-height:360px}
+.q .a p{margin:0 0 26px;font-size:16px;max-width:62ch}
+
+footer{border-top:1px solid var(--hair);padding:60px 0 40px;background:var(--panel)}
+.foot-top{display:flex;justify-content:space-between;gap:44px;flex-wrap:wrap;margin-bottom:44px}
+.foot-brand{max-width:300px}
+.foot-brand .brand{display:block;margin-bottom:12px}
+.foot-brand p{font-size:14.5px;margin:0}
+.foot-cols{display:flex;gap:60px;flex-wrap:wrap}
+.foot-col h5{font-family:"IBM Plex Mono";font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--bordeaux);margin:0 0 15px}
+.foot-col a{display:block;font-size:14.5px;margin-bottom:10px;transition:color .2s;color:var(--body)}
+.foot-col a:hover{color:var(--ink)}
+.legal{border-top:1px solid var(--hair);padding-top:24px;color:var(--faint);font-size:12.5px;line-height:1.7}
+.legal .row2{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:12px;font-family:"IBM Plex Mono";letter-spacing:.04em}
+.legal a,.formnote a,.wl .note a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.legal a:hover,.formnote a:hover,.wl .note a:hover{color:var(--bordeaux)}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--bordeaux);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--bordeaux);color:#fff;padding:10px 16px;border-radius:0 0 8px 0;z-index:100;text-decoration:none;font-weight:600}
+.skip:focus{left:0}
+
+/* mobile refinements */
+@media(max-width:640px){
+  .announce{font-size:11px;padding:9px 14px}
+  .an-x{display:none}
+  .tk{padding:14px 24px;font-size:11.5px}
+  .tk .bicon svg{width:24px;height:24px}
+}
+@media(max-width:560px){
+  .signup{flex-direction:column}
+  .signup .btn{width:100%}
+  .refbox{flex-direction:column}
+  .refbox .btn{width:100%}
+}
+@media(max-width:520px){
+  .nav{height:60px}
+  .brand{font-size:21px}
+  .nav .btn{padding:9px 14px;font-size:13px}
+  .navlinks{gap:12px;font-size:12.5px}
+  .stage{min-height:360px}
+  .sachet{width:196px;height:326px;padding:36px 20px 20px}
+  .hero-facts{gap:16px 22px}
+  .hf .n{font-size:21px}
+}
+@media(max-width:480px){
+  .crow>div{padding:14px 13px;font-size:13.5px;gap:8px}
+  .facts{padding:16px 14px}
+  .facts h3{font-size:26px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#top">Skip to main content</a>
+<div class="announce">Pre-launch — <b>the waitlist is open.</b> <span class="an-x">First members get a free sample before launch.</span></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <nav class="navlinks">
+      <a href="#about">About</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+    <a class="brand" href="#top">Rouzey</a>
+    <a class="btn" href="#waitlist">Join the waitlist</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal in">
+        <h1>Better sex.<br><span class="acc">Real desire.</span></h1>
+        <p class="sub">Enhance your <b>drive and performance</b> with a clinically-studied jelly stick for the bedroom.</p>
+        <form class="signup" onsubmit="return joinWaitlist(event)">
+          <input type="email" required placeholder="Enter your email" aria-label="Email address" />
+          <button class="btn" type="submit">Join the waitlist</button>
+        </form>
+        <p class="formnote">Free to join. First members get a free sample before launch. Leave anytime. By joining, you agree to receive Rouzey emails — see our <a href="privacy.html">Privacy Policy</a>.</p>
+        <div class="hero-facts">
+          <div class="hf"><span class="n">~15 min</span><span class="k">Until it works</span></div>
+          <div class="hf"><span class="n">6</span><span class="k">Ingredients, all on the label</span></div>
+          <div class="hf"><span class="n">0</span><span class="k">Sugar · Stimulants</span></div>
+        </div>
+      </div>
+      <div class="stage reveal in">
+        <div class="studio" aria-hidden="true"></div>
+        <div class="sachet" role="img" aria-label="Rouzey gel sachet">
+          <div class="perf"><span>Tear</span><span class="dash"></span></div>
+          <div class="stag">Nitric-oxide gel · 12g</div>
+          <div class="wm">Rouzey<small>OXYSTORM® COMPLEX</small></div>
+          <div class="lab">Take <b>1 gel</b> · <b>15 min</b> before</div>
+          <div class="tag">For the night ahead.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BADGES -->
+  <div class="ticker" aria-label="Product credentials">
+    <div class="track" id="track">
+      <span class="tk"><span class="bicon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="17"/><path d="M15 11 C 25 15, 25 25, 15 29" stroke-width="1.6"/><path d="M25 11 C 15 15, 15 25, 25 29" stroke-width="1.6"/><path d="M17.5 14 H22.5" stroke-width="1.4"/><path d="M16.5 20 H23.5" stroke-width="1.4"/><path d="M17.5 26 H22.5" stroke-width="1.4"/><path d="M9 31 L31 9" stroke-width="2.4"/></svg></span>Non-GMO</span>
+      <span class="tk"><span class="bicon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7 L16 26 a4 4 0 0 0 8 0 L24 7"/><path d="M14 7 H26"/><path d="M16 18 H24" stroke-width="1.4"/><path d="M17 22 H23" stroke-width="1.4"/><path d="M30 8 C 32 11, 32 12.5, 30 13.5 C 28 12.5, 28 11, 30 8 Z" fill="currentColor" stroke="none"/></svg></span>Third-party tested</span>
+      <span class="tk"><span class="bicon"><svg viewBox="0 0 40 40" fill="none"><polygon points="38,20 34.97,24.01 35.59,29 30.96,30.96 29,35.59 24.01,34.97 20,38 15.99,34.97 11,35.59 9.04,30.96 4.41,29 5.03,24.01 2,20 5.03,15.99 4.41,11 9.04,9.04 11,4.41 15.99,5.03 20,2 24.01,5.03 29,4.41 30.96,9.04 35.59,11 34.97,15.99" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><text x="20" y="20" text-anchor="middle" dominant-baseline="central" font-family="'Space Mono',monospace" font-size="10" font-weight="700" fill="currentColor">GMP</text></svg></span>Made in a cGMP facility</span>
+    </div>
+  </div>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="band" id="inside">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        
+        <h2>Six ingredients. One night.</h2>
+        <p>Together they get blood flowing, lift desire, and keep you present.</p>
+      </div>
+      <div class="constel reveal" id="constel">
+        <svg class="connector" id="connector" aria-hidden="true"></svg>
+        <div class="col left">
+          <button class="icard active" data-num="01" data-name="Oxystorm®" data-dose="1,000 mg" data-desc="Made from red spinach. Helps the body make more nitric oxide, fast.">
+            <span class="iname">Oxystorm®</span><span class="idose">1,000 mg</span>
+          </button>
+          <button class="icard" data-num="02" data-name="Nitrosigine®" data-dose="1,500 mg" data-desc="Keeps blood flowing well for hours.">
+            <span class="iname">Nitrosigine®</span><span class="idose">1,500 mg</span>
+          </button>
+          <button class="icard" data-num="03" data-name="Zembrin®" data-dose="50 mg" data-desc="Helps you feel calm, relaxed and present.">
+            <span class="iname">Zembrin®</span><span class="idose">50 mg</span>
+          </button>
+        </div>
+        <div class="feature" id="feature">
+          <div class="fnum" id="f-num">01</div>
+          <div class="fname" id="f-name">Oxystorm®</div>
+          <div class="fsachet-wrap">
+            <div class="studio-sm" aria-hidden="true"></div>
+            <div class="sachet" role="img" aria-label="Rouzey gel sachet">
+              <div class="perf"><span>Tear</span><span class="dash"></span></div>
+              <div class="stag">NO gel · 12g</div>
+              <div class="wm">Rouzey<small>OXYSTORM®</small></div>
+              <div class="tag">For the night ahead.</div>
+            </div>
+          </div>
+          <div class="fdesc" id="f-desc">Made from red spinach. Helps the body make more nitric oxide, fast.</div>
+          <div class="fdose" id="f-dose">1,000 MG</div>
+        </div>
+        <div class="col right">
+          <button class="icard" data-num="04" data-name="Testofen®" data-dose="600 mg" data-desc="Fenugreek extract that supports testosterone and desire.">
+            <span class="iname">Testofen®</span><span class="idose">600 mg</span>
+          </button>
+          <button class="icard" data-num="05" data-name="Affron®" data-dose="28 mg" data-desc="Saffron extract that lifts your mood.">
+            <span class="iname">Affron®</span><span class="idose">28 mg</span>
+          </button>
+          <button class="icard" data-num="06" data-name="AstraGin®" data-dose="50 mg" data-desc="Helps your body absorb all of the above.">
+            <span class="iname">AstraGin®</span><span class="idose">50 mg</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="band">
+    <div class="wrap pos-wrap">
+      <div class="lede reveal">
+        
+        <h2>You don't need a prescription to feel like yourself.</h2>
+        <p>The old way means forms to fill out, a wait for a doctor's note, and a pill that feels like medicine. Rouzey is easy. You tear it open and take it. That's it.</p>
+      </div>
+      <div class="compare reveal">
+        <div class="crow head"><div class="old chead">The little blue pill</div><div class="new chead">The Rouzey gel</div></div>
+        <div class="crow">
+          <div class="old"><svg class="cross" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Forms to fill out and waiting</div>
+          <div class="new"><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Open it and go in 15 minutes</div>
+        </div>
+        <div class="crow">
+          <div class="old"><svg class="cross" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Feels like medicine</div>
+          <div class="new"><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Feels like a treat, not a pill</div>
+        </div>
+        <div class="crow">
+          <div class="old"><svg class="cross" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Works just one way</div>
+          <div class="new"><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Supports desire, stamina and flow</div>
+        </div>
+        <div class="crow">
+          <div class="old"><svg class="cross" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> You hide it away</div>
+          <div class="new"><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Nice enough to leave out</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="band alt" id="how">
+    <div class="wrap">
+      <div class="sec-head center reveal"><h2>How the night goes</h2></div>
+      <div class="timeline reveal" id="timeline">
+        <div class="tl-line"></div>
+        <div class="tl-steps">
+          <div class="tl-step" data-i="0"><span class="tl-node"></span><span class="no">First</span><div class="when">15 minutes</div><p>Tear it open and take the gel. It starts working in about fifteen minutes. No water, no pills.</p></div>
+          <div class="tl-step" data-i="1"><span class="tl-node"></span><span class="no">Then</span><div class="when">All night</div><p>It supports your desire, stamina and blood flow through the night.</p></div>
+          <div class="tl-step" data-i="2"><span class="tl-node"></span><span class="no">After</span><div class="when">The next day</div><p>No sugar and no stimulants means no crash. You wake up feeling like yourself.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STANDARD -->
+  <section class="band" id="standard">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        
+        <h2>This industry is full of tricks.<br>Here is where we stand.</h2>
+      </div>
+      <div class="standard reveal">
+        <div class="std"><div class="num">1</div><div><h4>Every dose on the label.</h4><p>No "proprietary blends." You will always know exactly how much of each ingredient you're taking.</p></div></div>
+        <div class="std"><div class="num">2</div><div><h4>Studied, branded ingredients only.</h4><p>We use standardized extracts with published human research — the exact forms used in the studies, at the doses the studies used.</p></div></div>
+        <div class="std"><div class="num">3</div><div><h4>Tested by outside labs.</h4><p>Every batch is tested by an independent lab for purity and accuracy before it ships.</p></div></div>
+        <div class="std"><div class="num">4</div><div><h4>No surprise subscriptions.</h4><p>We will never sign you up for a plan you didn't clearly choose. Cancelling will always be easy.</p></div></div>
+        <div class="std"><div class="num">5</div><div><h4>No fake reviews. Ever.</h4><p>We haven't launched yet, so we have no reviews — and we won't invent any. When real ones come in, that's what you'll see.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="band ink" id="about">
+    <div class="wrap">
+      <div class="founder reveal">
+        <span class="kicker">A note from the founder</span>
+        <div class="rule"></div>
+        <blockquote>I started Rouzey because this category treats men like a problem to be medicated, or a mark to be fooled. I wanted a third option: something honest, made well, that you'd be glad to have in the drawer. Read the label. Ask us anything. That's the whole pitch.</blockquote>
+        <div class="sig">
+          <span class="name">[Your signature]</span>
+          <span class="role">Founder, Rouzey</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section class="band" id="waitlist">
+    <div class="wrap">
+      <div class="wl">
+        <div class="wl-join reveal" id="wl-join">
+          
+          <h2>Join the list. Be first.</h2>
+          <p class="lead">We're not selling yet — and we won't pretend otherwise. Join now and you'll be first when we launch.</p>
+          <div class="perks">
+            <div class="perk"><span class="pk">For the first members</span><h4>A free sample</h4><p>The first members get a gel to try before anyone can buy one.</p></div>
+            <div class="perk"><span class="pk">For everyone on the list</span><h4>The best price</h4><p>You lock in our lowest price. It will not be offered again after launch.</p></div>
+            <div class="perk"><span class="pk">At launch</span><h4>First in line</h4><p>The first batch goes to the list before it opens to the public.</p></div>
+          </div>
+          <form class="signup" onsubmit="return joinWaitlist(event)">
+            <input type="email" required placeholder="Enter your email" aria-label="Email address" />
+            <button class="btn" type="submit">Join the waitlist</button>
+          </form>
+          <p class="note">No charge today. No spam. Leave anytime. By joining, you agree to receive Rouzey emails — see our <a href="privacy.html">Privacy Policy</a>.</p>
+          <div class="wl-how"><span><b>Join</b></span><span class="ar">→</span><span><b>Share</b></span><span class="ar">→</span><span><b>Get first access</b></span></div>
+        </div>
+
+        <div class="wl-success" id="wl-success">
+          <span class="kicker">You're on the list</span>
+          <div class="pos-num" id="pos-num">#127</div>
+          <div class="pos-label">That's your place in line. We'll email you the moment we launch.</div>
+          <div class="ref-title">Want to move up?</div>
+          <p class="ref-sub">Share your link. Every friend who joins moves you up the list.</p>
+          <div class="refbox">
+            <input type="text" id="ref-link" readonly value="https://rouzey.com/?ref=RZ8K3Q" aria-label="Your referral link" />
+            <button class="btn" type="button" onclick="copyRef(this)">Copy</button>
+          </div>
+          <div class="friends"><b id="friend-count">0</b> friends joined so far.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="band alt" id="faq">
+    <div class="wrap">
+      <div class="sec-head center reveal"><h2>Frequently asked</h2></div>
+      <div class="faq reveal">
+        <div class="q"><button class="hd"><span class="qt">What is Rouzey?</span></button><div class="a"><p>A simple gel for men. It supports desire, stamina and blood flow. It's made with Oxystorm® and a few other studied ingredients. It's not a drug, so you don't need a prescription.</p></div></div>
+        <div class="q"><button class="hd"><span class="qt">Who can enjoy Rouzey?</span></button><div class="a"><p>Rouzey is made for adult men, 18 and over, who want to feel their best for the night ahead. If you take other medicine or have a health problem, talk to your doctor before you start.</p></div></div>
+        <div class="q"><button class="hd"><span class="qt">When should I take Rouzey?</span></button><div class="a"><p>Take one gel about fifteen to thirty minutes before the night ahead. You can take it with or without food. One gel is all you need.</p></div></div>
+        <div class="q"><button class="hd"><span class="qt">How fast does it work?</span></button><div class="a"><p>About fifteen minutes. A gel goes to work faster than a pill, so you don't have to wait long.</p></div></div>
+        <div class="q"><button class="hd"><span class="qt">How long do the effects of Rouzey last?</span></button><div class="a"><p>The effects last for several hours — enough to carry you through the night.</p></div></div>
+        <div class="q"><button class="hd"><span class="qt">Is it like Viagra?</span></button><div class="a"><p>No. Rouzey is a wellness supplement, not a drug. It supports blood flow, desire and stamina in a natural way. If you have a health problem, talk to your doctor first.</p></div></div>
+        <div class="q"><button class="hd"><span class="qt">Is Rouzey safe?</span></button><div class="a"><p>Rouzey uses studied ingredients at clear, sensible amounts. It's made in a certified US facility and tested by outside labs. As with any supplement, talk to your doctor first if you take other medicine or have a health problem.</p></div></div>
+        <div class="q"><button class="hd"><span class="qt">Any sugar or stimulants?</span></button><div class="a"><p>None. There's no sugar and no stimulants, so there's no crash and nothing to keep you up once you're done.</p></div></div>
+        <div class="q"><button class="hd"><span class="qt">What do I get for joining early?</span></button><div class="a"><p>The first members get a free gel to try before launch. Everyone on the list gets our lowest price and the first batch before the public.</p></div></div>
+        <div class="q"><button class="hd"><span class="qt">When can I buy it?</span></button><div class="a"><p>Not yet — we're still getting ready. Join the waitlist and you'll be the first to know the day we launch.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand"><a class="brand" href="#top">Rouzey</a><p>Sexual wellness, reimagined. For the night ahead.</p></div>
+      <div class="foot-cols">
+        <div class="foot-col"><h5>Product</h5><a href="#inside">What's inside</a><a href="#how">How it works</a><a href="#waitlist">Join the waitlist</a></div>
+        <div class="foot-col"><h5>Company</h5><a href="#standard">Our standard</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy Policy</a><a href="#">Contact</a></div>
+        <div class="foot-col"><h5>Follow</h5><a href="https://instagram.com/rouzey" target="_blank" rel="noopener">Instagram</a><a href="#" target="_blank" rel="noopener">TikTok</a><a href="#" target="_blank" rel="noopener">X</a></div>
+      </div>
+    </div>
+    <div class="legal">
+      <div class="row2"><span>© 2026 Rouzey. All rights reserved.</span><span><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy Policy</a> · <a href="accessibility.html">Accessibility</a></span></div>
+      These statements have not been evaluated by the FDA. Not intended to diagnose, treat, cure, or prevent any disease. Consult your physician before use. <a href="disclaimer.html">Read Full Disclaimer</a>.
+    </div>
+  </div>
+</footer>
+
+<script>
+  const rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // header: hide on scroll down, reveal on scroll up
+  const hdr=document.getElementById('hdr');
+  let lastY=scrollY;
+  addEventListener('scroll',()=>{
+    const y=scrollY;
+    if(Math.abs(y-lastY)>6){
+      hdr.classList.toggle('navhide', y>lastY && y>140);
+      lastY=y;
+    }
+  },{passive:true});
+
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const track=document.getElementById('track');
+  if(track && !rm) track.innerHTML+=track.innerHTML;
+
+  // constellation
+  const cards=[...document.querySelectorAll('.icard')];
+  const fNum=document.getElementById('f-num'), fName=document.getElementById('f-name'),
+        fDesc=document.getElementById('f-desc'), fDose=document.getElementById('f-dose');
+  const connector=document.getElementById('connector'), constel=document.getElementById('constel'),
+        featureSachet=document.querySelector('#feature .sachet');
+  function selectCard(card){
+    cards.forEach(c=>c.classList.remove('active')); card.classList.add('active');
+    fNum.textContent=card.dataset.num; fName.textContent=card.dataset.name;
+    fDesc.textContent=card.dataset.desc; fDose.textContent=card.dataset.dose.toUpperCase();
+    drawConnector();
+  }
+  cards.forEach(c=>{c.addEventListener('click',()=>selectCard(c));c.addEventListener('mouseenter',()=>selectCard(c));c.addEventListener('focus',()=>selectCard(c));});
+  function drawConnector(){
+    if(!connector||!constel) return;
+    if(innerWidth<860){connector.innerHTML='';return;}
+    const active=document.querySelector('.icard.active'); if(!active){connector.innerHTML='';return;}
+    const g=constel.getBoundingClientRect(), a=active.getBoundingClientRect(), s=featureSachet.getBoundingClientRect();
+    connector.setAttribute('viewBox',`0 0 ${g.width} ${g.height}`);
+    const isLeft=active.closest('.col').classList.contains('left');
+    const x1=(isLeft? a.right : a.left)-g.left, y1=a.top+a.height/2-g.top;
+    const x2=(isLeft? s.left : s.right)-g.left, y2=s.top+s.height*0.30-g.top;
+    const midx=x1+(x2-x1)*0.42;
+    connector.innerHTML=`<path d="M ${x1} ${y1} L ${midx} ${y1} L ${x2} ${y2}" fill="none" stroke="#6E1423" stroke-width="1.25" opacity="0.75"/><circle cx="${x1}" cy="${y1}" r="3.5" fill="#6E1423"/><circle cx="${x2}" cy="${y2}" r="2.5" fill="#6E1423"/>`;
+  }
+  addEventListener('resize',drawConnector);
+  setTimeout(drawConnector,300);
+  const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){drawConnector();cio.disconnect();}}),{threshold:.2});
+  if(constel) cio.observe(constel);
+
+  // timeline nodes light as you scroll
+  const tl=document.getElementById('timeline'), steps=[...document.querySelectorAll('.tl-step')];
+  if(tl){
+    function onScroll(){const r=tl.getBoundingClientRect();let p=(innerHeight*0.75-r.top)/(r.height);p=Math.max(0,Math.min(1,p));
+      steps.forEach((s,i)=>s.classList.toggle('lit',p>=(i)/(steps.length)-0.02));}
+    addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
+  }
+
+  // faq
+  const faqBtns=[...document.querySelectorAll('.q .hd')];
+  faqBtns.forEach(b=>{
+    b.setAttribute('aria-expanded','false');
+    b.addEventListener('click',()=>{
+      const q=b.parentElement,open=q.classList.contains('open');
+      document.querySelectorAll('.q.open').forEach(o=>o.classList.remove('open'));
+      faqBtns.forEach(x=>x.setAttribute('aria-expanded','false'));
+      if(!open){q.classList.add('open');b.setAttribute('aria-expanded','true');}
+    });
+  });
+
+  // WAITLIST — live backend (Google Apps Script). Paste your deployed /exec URL below.
+  const WAITLIST_URL='PASTE_YOUR_APPS_SCRIPT_URL_HERE';
+  const REF=(new URLSearchParams(location.search)).get('ref')||'';
+  async function joinWaitlist(e){
+    e.preventDefault();
+    const f=e.target, input=f.querySelector('input'), btn=f.querySelector('button');
+    const email=input.value.trim(); if(!email) return false;
+    if(WAITLIST_URL.indexOf('PASTE_')===0){
+      const t=btn.textContent; btn.textContent='Waitlist not connected yet';
+      setTimeout(()=>btn.textContent=t,3000); return false;
+    }
+    const label=btn.textContent; btn.textContent='Joining…'; btn.disabled=true;
+    try{
+      const res=await fetch(WAITLIST_URL,{method:'POST',body:JSON.stringify({email:email,ref:REF})});
+      const data=await res.json();
+      if(!data.ok) throw new Error(data.error||'failed');
+      document.getElementById('pos-num').textContent='#'+Number(data.position).toLocaleString();
+      document.getElementById('ref-link').value='https://rouzey.com/?ref='+data.code;
+      document.getElementById('friend-count').textContent=Number(data.referrals||0);
+      document.getElementById('wl-join').classList.add('hide');
+      document.getElementById('wl-success').classList.add('show');
+      document.getElementById('waitlist').scrollIntoView({behavior:rm?'auto':'smooth',block:'center'});
+    }catch(err){
+      btn.textContent='Something went wrong — try again';
+      setTimeout(()=>{btn.textContent=label;},3000);
+    }finally{ btn.disabled=false; if(btn.textContent==='Joining…') btn.textContent=label; }
+    return false;
+  }
+  function copyRef(btn){
+    const inp=document.getElementById('ref-link');
+    try{navigator.clipboard.writeText(inp.value);}catch(_){inp.select();document.execCommand&&document.execCommand('copy');}
+    const t=btn.textContent;btn.textContent='Copied ✓';setTimeout(()=>btn.textContent=t,1800);
+  }
+</script>
+</body>
+</html>

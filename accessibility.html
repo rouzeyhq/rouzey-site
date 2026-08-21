@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Accessibility — Rouzey</title>
+<meta name="robots" content="index,follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F4F0; --panel:#FFFFFF; --ink:#211B1D; --body:#4A4143; --faint:#746A6C;
+  --hair:#E4DFD7; --hair-2:#D2CCC2; --bordeaux:#6E1423; --bordeaux-2:#571020;
+}
+*{box-sizing:border-box;font-synthesis:none}
+body{margin:0;background:var(--paper);color:var(--body);font-family:"Inter",system-ui,sans-serif;
+  font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+a{color:var(--bordeaux);text-decoration:underline;text-underline-offset:2px}
+a:hover{color:var(--bordeaux-2)}
+header{position:sticky;top:0;background:rgba(246,244,240,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:"Instrument Serif",serif;font-weight:600;font-size:23px;color:var(--ink);text-decoration:none}
+.back{font-size:14px;text-decoration:none;color:var(--body);border:1px solid var(--hair-2);border-radius:7px;padding:8px 14px}
+.back:hover{border-color:var(--bordeaux);color:var(--bordeaux)}
+main{padding:56px 0 90px}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--bordeaux);font-weight:700}
+h1{font-family:"Instrument Serif",serif;font-weight:500;font-size:clamp(34px,5vw,50px);color:var(--ink);margin:14px 0 10px;line-height:1.08}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--faint);margin-bottom:34px}
+h2{font-family:"Instrument Serif",serif;font-weight:500;font-size:25px;color:var(--ink);margin:44px 0 12px;line-height:1.2}
+p{margin:0 0 14px}
+ul{margin:0 0 14px;padding-left:22px}
+li{margin-bottom:8px}
+.note{background:var(--panel);border:1px solid var(--hair);border-radius:12px;padding:18px 20px;font-size:15px;margin:26px 0 0}
+.note b{color:var(--ink)}
+footer{border-top:1px solid var(--hair);padding:34px 0;font-size:13px;color:var(--faint)}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="index.html">Rouzey</a>
+  <a class="back" href="index.html">&larr; Back to site</a>
+</div></header>
+
+<main class="wrap">
+  <span class="kicker">Legal</span>
+  <h1>Accessibility</h1>
+  <div class="meta">Last updated: August 16, 2026</div>
+
+  <p>Rouzey wants rouzey.com to work for everyone, including people who use assistive technology. Our goal is conformance with the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA, and we treat accessibility as part of building the site, not an afterthought.</p>
+
+  <h2>What we've built in</h2>
+  <ul>
+    <li>Semantic HTML with a logical heading structure, native buttons and form controls, and labels on every input.</li>
+    <li>Full keyboard operability — every interactive element can be reached and used with a keyboard, with clearly visible focus indicators and a "skip to main content" link.</li>
+    <li>Screen-reader support: expandable sections announce their state, decorative graphics are hidden from assistive technology, and meaningful images carry text alternatives.</li>
+    <li>Text colors chosen to meet WCAG AA contrast requirements against their backgrounds.</li>
+    <li>Respect for your system's reduced-motion setting — when it's on, animations and moving content on the site are turned off.</li>
+    <li>A responsive layout that works at small screen sizes and remains usable when text is zoomed to 200%.</li>
+  </ul>
+
+  <h2>How we check</h2>
+  <p>Before we publish changes, we review them with keyboard-only navigation and automated accessibility checks, and we fix what we find. As a small team we may miss things — when we do, we want to know.</p>
+
+  <h2>Third-party content</h2>
+  <p>Some parts of our service run on outside providers — for example our email signup platform and, in the future, checkout and customer support tools. We don't control their code, but we take accessibility into account when choosing providers and raise issues with them when we find any.</p>
+
+  <h2>Known limitations</h2>
+  <p>We're not aware of significant barriers on this site today. If we discover any — or you do — we'll list them here while we fix them.</p>
+
+  <h2>Tell us what's not working</h2>
+  <p>If any part of this site is difficult for you to use, we genuinely want to hear about it. Email <a href="mailto:hello@rouzey.com">hello@rouzey.com</a> with "Accessibility" in the subject line and a description of the problem and, if you can, the page and the assistive technology you were using. We aim to respond within 5 business days and to fix confirmed barriers promptly.</p>
+
+  <p>Accessibility is ongoing work, and this page will be updated as the site evolves.</p>
+
+  <div class="note"><b>Template notice for the site owner (delete before publishing):</b> set up the contact mailbox, and re-run an accessibility check (keyboard pass + a free tool like Lighthouse or axe) whenever you add new sections, embeds, or the checkout — then update the "Known limitations" section honestly if anything is pending.</div>
+</main>
+
+<footer><div class="wrap">© 2026 Rouzey. All rights reserved. · <a href="index.html">Back to rouzey.com</a> · <a href="privacy.html">Privacy Policy</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="terms.html">Terms</a></div></footer>
+</body>
+</html>
